@@ -101,3 +101,151 @@ def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model
 
     csv_f.close()
     csv_f_2.close()
+
+
+def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotate=(-3,3),grayscale=True, size=None):
+    from PIL import Image
+    import PIL
+
+    def get_files(dir):
+        files = []
+        for f in os.listdir(dir):
+
+            ff = os.path.join(dir, f)
+
+            files.append(ff)
+        return files
+
+
+
+    def merge_images(base, text, pos = (0, 0)):
+        from draw_document import watermark
+
+        return watermark(base, text, pos)
+
+    back_files = get_files(dir_back)
+
+    f_csv = os.path.join(dir, 'gt.csv')
+    f_csv_2 = os.path.join(dir, 'gt_2.csv')
+    j = 0
+
+    if not os.path.isdir(dir):
+        print 'NEW DIR: ', dir
+        os.makedirs(dir)
+        os.mkdir(os.path.join(dir, 'imgs'))
+        os.mkdir(os.path.join(dir, 'gt'))
+        csv_f = open(f_csv, 'w')
+        #csv_f_2 = open(f_csv_2, 'w')
+
+    else:
+        print 'OLD DIR: ', dir
+        csv_f = open(f_csv, 'r')
+        reader = csv.reader(csv_f, delimiter=' ')
+        for _ in reader:
+            j += 1
+        csv_f.close()
+        print 'number', j
+        csv_f = open(f_csv, 'a')
+        #csv_f_2 = open(f_csv_2, 'a')
+
+    writer = csv.writer(csv_f, delimiter=' ')
+
+    #writer2 = csv.writer(csv_f_2, delimiter=' ')
+
+    with open(f_csv_argb, 'r') as csv_f:
+        reader = csv.reader(csv_f, delimiter=' ')
+        j = 0
+
+        for row in reader:
+            if len(row) >= 2 and os.path.isfile(row[0]):
+                f_text, num = row[:2]
+                num = int(num)
+
+                a, b = os.path.split(f_text)
+
+                key = b.split(':')[0]
+
+                #imgs = back_dict[key]
+
+                #print 'shuffle','list', len(imgs)
+
+                f_back = None
+
+                if j < len(back_files):
+                    f_back = back_files[j]
+                    j+=1
+                else:
+                    np.random.shuffle(back_files)
+                    f_back = back_files[0]
+                    j=1
+
+
+                print 'f_back', f_back
+
+                base = Image.open(f_back)
+
+                text = Image.open(f_text)
+
+                pos = (0,0)
+
+                if resize:
+
+                    back_w, back_h = base.size
+
+                    width, height = text.size
+
+                    if back_h < height:
+                        print 'back_ H W', back_h, back_w
+                        back_h = (back_h + height) / 2
+
+                        back_w = max(back_w , width)
+
+                        back_w +=np.random.randint(-50, 50)
+
+                        print 'back_ H w', back_h, back_w
+
+                        base = base.resize((back_w, back_h), PIL.Image.ANTIALIAS)
+
+
+                    w = int(width*(resize[1]))
+                    h = int(height * (resize[0]))
+                    print width, height
+                    width-=np.random.randint(0,w)
+                    height-=np.random.randint(0,h)
+                    print width, height
+
+                    text = text.resize((width, height), PIL.Image.ANTIALIAS)
+
+                    base_w, base_h =base.size
+
+                    l = base_w - width
+                    h = base_h - height
+
+                    pos = (l,h)
+
+                if rotate:
+                    angle = np.random.randint(rotate[0], rotate[1])
+                    print 'angle', angle
+                    text = text.rotate(angle, resample=Image.NEAREST)
+
+
+                img = merge_images(base, text, pos=pos)
+
+                if grayscale:
+                    img = img.convert('L')
+
+
+
+                if size:
+                    img = resize(img, (size[1], size[0]))
+
+                N = b.split(':')[1].split('_')[0]
+
+                fname = os.path.join(dir, 'imgs',key + ':' + N + '_' + str(num) + '.png')
+                print 'fname', fname, num
+                img.save(fname)
+
+
+
+                writer.writerow([fname, num])
+
