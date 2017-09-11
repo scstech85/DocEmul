@@ -23,7 +23,7 @@ def run_realbackground(dir, path_background,num=9, size=None, greyscale=False,ty
     generate(dir, num=num, size=size,sampler=realSampler, greyscale=greyscale,type=type,model=model)
 
 
-solidSampler = SolidBackGroundback(colors=[255])
+#solidSampler = SolidBackGroundback(colors=[255])
 #realSampler = RealBackGound.load_examples()
 
 def run(dir, num=5, size=None, sampler=None, greyscale=False,type='TXT',model='branden2.xml',seed=2):
