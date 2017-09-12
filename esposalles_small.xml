@@ -1,0 +1,410 @@
+<?xml version="1.0" ?>
+<Documents>
+    <Document id="1!L" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="150" corpus_width="2564" corpus_min_height="2000"
+              corpus_max_height="3890" rotate="2">
+        <header>
+            <GroupTextLine probability="1" type="FULL">
+
+
+                <Line  height="150" text_min_height_prob="0.95" y_space_step="1" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="1"  type_text="2" x="0.95" x_random="0" y_random="0" width="0.10" height="-1"  probability="1"/>
+
+
+                </Line>
+
+            </GroupTextLine>
+
+            <GroupTextLine probability="0.7" type="FULL">
+
+
+                <Line  height="320" text_min_height_prob="0.60" y_space_step="300" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0.30" x_random="0.1" y_random="0.1" width="0.50" height="-1"  probability="1"/>
+
+                </Line>
+                <Line  height="250" text_min_height_prob="0.50" y_space_step="250" type="TextLine" probability="0.3" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0.40" x_random="0.1" y_random="0.1" width="0.30" height="-1"  probability="1"/>
+
+                </Line>
+                 <Line  height="0" text_min_height_prob="0.8" y_space_step="50" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+            </GroupTextLine>
+
+        </header>
+        <record>
+
+            <GroupTextLine probability="1" type="NO">
+
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
+                </Line>
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="125" text_min_height_prob="0.9" y_space_step="100" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.68" height="-1" probability="1" />
+                    <Cell type_font="0"  type_text="1" x="0.90" x_random="0.01" y_random="0.1" width="0.12" height="90" probability="1" />
+
+                </Line>
+
+                <Line  height="0" text_min_height_prob="0.8" y_space_step="70" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+
+
+            </GroupTextLine>
+
+        </record>
+
+        <background>
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="85" fill="black" probability="1" />
+            <Object command="rectangle" left="0" top="3890" right="2762" bottom="3942" fill="black" probability="1" />
+            <Object command="rectangle" left="100" top="0" right="173" bottom="3942" fill="noise_0.65" probability="1" />
+            <Object command="rectangle" left="2695" top="0" right="2762" bottom="3942" fill="noise_0.90" probability="1" />
+
+
+            <Object command="line" left="2415" top="0" right="2415" bottom="3942" fill="black" probability="1" />
+            <Object command="line" left="2495" top="0" right="2495" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="2230" top="0" right="2230" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="550" top="0" right="550" bottom="3942" fill="black" probability="1" />
+
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="3942" fill="noise_0.10" probability="0.5" />
+        </background>
+
+    </Document>
+
+    <Document id="1!R" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="100" corpus_width="2564" corpus_min_height="2000"
+              corpus_max_height="3890" rotate="2">
+        <header>
+            <GroupTextLine probability="1" type="FULL">
+
+
+                <Line  height="150" text_min_height_prob="0.95" y_space_step="1" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="1"  type_text="2" x="0.03" x_random="0" y_random="0" width="0.20" height="-1"  probability="1"/>
+
+                </Line>
+
+            </GroupTextLine>
+
+            <GroupTextLine probability="0.7" type="FULL">
+
+
+                <Line  height="320" text_min_height_prob="0.60" y_space_step="300" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0.30" x_random="0.1" y_random="0.1" width="0.50" height="-1"  probability="1"/>
+
+                </Line>
+                <Line  height="250" text_min_height_prob="0.50" y_space_step="250" type="TextLine" probability="0.3" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0.40" x_random="0.1" y_random="0.1" width="0.30" height="-1"  probability="1"/>
+
+                </Line>
+                 <Line  height="0" text_min_height_prob="0.8" y_space_step="50" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+            </GroupTextLine>
+
+        </header>
+        <record>
+
+            <GroupTextLine probability="1" type="NO">
+
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
+                </Line>
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                    <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="125" text_min_height_prob="0.9" y_space_step="100" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.68" height="-1" probability="1" />
+                    <Cell type_font="0"  type_text="1" x="0.90" x_random="0.01" y_random="0.1" width="0.12" height="90" probability="1" />
+
+                </Line>
+
+                <Line  height="0" text_min_height_prob="0.8" y_space_step="70" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+
+
+            </GroupTextLine>
+
+        </record>
+
+        <background>
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="85" fill="black" probability="1" />
+            <Object command="rectangle" left="0" top="3890" right="2762" bottom="3942" fill="black" probability="1" />
+
+            <Object command="rectangle" left="2695" top="0" right="2762" bottom="3942" fill="noise_0.90" probability="1" />
+            <Object command="rectangle" left="2550" top="0" right="2623" bottom="3942" fill="noise_0.65" probability="1" />
+
+
+            <Object command="line" left="2345" top="0" right="2325" bottom="3942" fill="black" probability="1" />
+            <Object command="line" left="2405" top="0" right="2405" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="2150" top="0" right="2150" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="500" top="0" right="500" bottom="3942" fill="black" probability="1" />
+
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="3942" fill="noise_0.10" probability="0.5" />
+        </background>
+
+    </Document>
+
+    <Document id="2!L" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="150" corpus_width="2564" corpus_min_height="2000"
+              corpus_max_height="3890" rotate="2">
+        <header>
+            <GroupTextLine probability="1" type="FULL">
+
+
+                <Line  height="150" text_min_height_prob="0.95" y_space_step="1" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="1"  type_text="2" x="0.95" x_random="0" y_random="0" width="0.10" height="-1"  probability="1"/>
+
+
+                </Line>
+
+            </GroupTextLine>
+
+            <GroupTextLine probability="0.7" type="FULL">
+
+
+                <Line  height="320" text_min_height_prob="0.60" y_space_step="300" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0.30" x_random="0.1" y_random="0.1" width="0.50" height="-1"  probability="1"/>
+
+                </Line>
+                <Line  height="250" text_min_height_prob="0.50" y_space_step="250" type="TextLine" probability="0.3" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0.40" x_random="0.1" y_random="0.1" width="0.30" height="-1"  probability="1"/>
+
+                </Line>
+                 <Line  height="0" text_min_height_prob="0.8" y_space_step="50" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+            </GroupTextLine>
+
+        </header>
+        <record>
+
+            <GroupTextLine probability="1" type="NO">
+
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
+                </Line>
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="125" text_min_height_prob="0.9" y_space_step="100" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.68" height="-1" probability="1" />
+                    <Cell type_font="3"  type_text="1" x="0.90" x_random="0.01" y_random="0.1" width="0.12" height="90" probability="1" />
+
+                </Line>
+
+                <Line  height="0" text_min_height_prob="0.8" y_space_step="70" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+
+
+            </GroupTextLine>
+
+        </record>
+
+        <background>
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="85" fill="black" probability="1" />
+            <Object command="rectangle" left="0" top="3890" right="2762" bottom="3942" fill="black" probability="1" />
+            <Object command="rectangle" left="100" top="0" right="173" bottom="3942" fill="noise_0.65" probability="1" />
+            <Object command="rectangle" left="2695" top="0" right="2762" bottom="3942" fill="noise_0.90" probability="1" />
+
+
+            <Object command="line" left="2415" top="0" right="2415" bottom="3942" fill="black" probability="1" />
+            <Object command="line" left="2495" top="0" right="2495" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="2230" top="0" right="2230" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="550" top="0" right="550" bottom="3942" fill="black" probability="1" />
+
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="3942" fill="noise_0.10" probability="0.5" />
+        </background>
+
+    </Document>
+
+    <Document id="2!R" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="100" corpus_width="2564" corpus_min_height="2000"
+              corpus_max_height="3890" rotate="2">
+        <header>
+            <GroupTextLine probability="1" type="FULL">
+
+
+                <Line  height="150" text_min_height_prob="0.95" y_space_step="1" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="1"  type_text="2" x="0.03" x_random="0" y_random="0" width="0.20" height="-1"  probability="1"/>
+
+                </Line>
+
+            </GroupTextLine>
+
+            <GroupTextLine probability="0.7" type="FULL">
+
+
+                <Line  height="320" text_min_height_prob="0.60" y_space_step="300" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0.30" x_random="0.1" y_random="0.1" width="0.50" height="-1"  probability="1"/>
+
+                </Line>
+                <Line  height="250" text_min_height_prob="0.50" y_space_step="250" type="TextLine" probability="0.3" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0.40" x_random="0.1" y_random="0.1" width="0.30" height="-1"  probability="1"/>
+
+                </Line>
+                 <Line  height="0" text_min_height_prob="0.8" y_space_step="50" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+            </GroupTextLine>
+
+        </header>
+        <record>
+
+            <GroupTextLine probability="1" type="NO">
+
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
+                </Line>
+
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                    <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
+
+                </Line>
+                <Line  height="125" text_min_height_prob="0.9" y_space_step="100" type="TextLine" probability="1" repeat="1">
+
+                    <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.68" height="-1" probability="1" />
+                    <Cell type_font="3"  type_text="1" x="0.90" x_random="0.01" y_random="0.1" width="0.12" height="90" probability="1" />
+
+                </Line>
+
+                <Line  height="0" text_min_height_prob="0.8" y_space_step="70" type="SeparatorLine" probability="1" repeat="1">
+
+
+
+                </Line>
+
+
+
+            </GroupTextLine>
+
+        </record>
+
+        <background>
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="85" fill="black" probability="1" />
+            <Object command="rectangle" left="0" top="3890" right="2762" bottom="3942" fill="black" probability="1" />
+
+            <Object command="rectangle" left="2695" top="0" right="2762" bottom="3942" fill="noise_0.90" probability="1" />
+            <Object command="rectangle" left="2550" top="0" right="2623" bottom="3942" fill="noise_0.65" probability="1" />
+
+
+            <Object command="line" left="2345" top="0" right="2325" bottom="3942" fill="black" probability="1" />
+            <Object command="line" left="2405" top="0" right="2405" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="2150" top="0" right="2150" bottom="3942" fill="black" probability="1" />
+
+            <Object command="line" left="500" top="0" right="500" bottom="3942" fill="black" probability="1" />
+
+            <Object command="rectangle" left="0" top="0" right="2762" bottom="3942" fill="noise_0.10" probability="0.5" />
+        </background>
+
+    </Document>
+
+    <dictonaries>
+        <Dictonary path="divina.txt" number_words="-1"/>
+        <Dictonary path="extra.txt" number_words="1"/>
+        <Dictonary path="numbers.txt" number_words="1"/>
+    </dictonaries>
+    <fonts>
+        <Font path="handwritten/A_Glitch_In_Time.ttf" />
+
+        <Font path="handwritten/Lovelt__.ttf" />
+        <Font path="handwritten/WankstabergBattles.ttf" />
+        <Font path="handwritten/SCRIPTIN.ttf" />
+
+
+        <Font path="handwritten/kevinwildfont.ttf" />
+        <Font path="handwritten/Mr_Fisherman_and_the_Shoemaker.ttf" />
+
+
+
+
+
+    </fonts>
+</Documents>
