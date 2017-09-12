@@ -3,6 +3,8 @@ A Toolkit to Generate Structured Historical Documents
 
 # Repository description 
 In EXAMPLES you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (BACKGROUND), the generated text files over a transparent background (TEXT) and genereted structured documents (GENERATED) 
+### handwritten
+In this directory you can find some fonts downloaded from http://www.dafont.com/it/
 
 
 ## Esposalles
