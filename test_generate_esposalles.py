@@ -10,7 +10,7 @@ def run(dir, num=5, size=None, sampler=realSampler, greyscale=True,type='IMG',mo
     generate(dir, num=num, size=size,sampler=sampler, greyscale=greyscale,type=type,model=model,seed=seed)
 
 #generate dataset with background
-#run('GENERATED/Esposalles/test')
+run('GENERATED/Esposalles/test')
 
 #data_augmentation
 data_augment('GENERATED/Esposalles/test/gt.csv', 'GENERATED/Esposalles/test_augmented',f_output = 'gt_augment.csv',resize=None,rotate=2, rotate_time=1, noise=1)
