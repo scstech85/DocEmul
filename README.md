@@ -1,5 +1,6 @@
 # DocEmul
 A Toolkit to Generate Structured Historical Documents
+(This repository is still under construction. Please let us know if you find any issues...)
 
 # Repository description 
 In EXAMPLES you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (BACKGROUND), the generated text files over a transparent background (TEXT) and genereted structured documents (GENERATED) 
