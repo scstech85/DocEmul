@@ -3,9 +3,9 @@ A Toolkit to Generate Structured Historical Documents
 (This repository is still under construction. Please let us know if you find any issues...)
 
 # Repository description 
-In this dropbox link (https://www.dropbox.com/sh/2bxfeacrg6s19rj/AADzyLlNUoj91W1eKSBfWJ1Ya?dl=0) it is possible to access to all data. Please create a local dir DATA and download all data from the in the local dir DATA.
+In this dropbox link (https://www.dropbox.com/sh/2bxfeacrg6s19rj/AADzyLlNUoj91W1eKSBfWJ1Ya?dl=0) it is possible to access to all data. Please create a local dir EXAMPLES and download all data from the in the local dir EXAMPLES.
 
-After the downloading, in DATA you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (BACKGROUND), the generated text files over a transparent background (TEXT) and genereted structured documents (GENERATED) 
+After the downloading, in EXAMPLES you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (BACKGROUND), the generated text files over a transparent background (TEXT) and genereted structured documents (GENERATED) 
 ### handwritten
 In this directory you can find some fonts downloaded from http://www.dafont.com/it/
 
