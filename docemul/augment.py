@@ -28,23 +28,23 @@ def augment_img(img, rotate=3, rotate_time=2, noise=2):
 
         im = np.asarray(out).copy()
         im = rgb2grey(im)
-        part = 20
+        part = tuple(map(int,0.05 * np.array(im.shape[:2])))
 
-        top = im[:part,:]
+        top = im[:part[0],:]
         v = np.mean(top[top!=M])
-        im[:part, :][top == M] = v
+        im[:part[0], :][top == M] = v
 
-        bottom = im[-part:,:]
+        bottom = im[-part[0]:,:]
         v = np.mean(bottom[bottom != M])
-        im[-part:, :][bottom == M] = v
+        im[-part[0]:, :][bottom == M] = v
 
-        left = im[:,:part]
+        left = im[:,:part[1]]
         v = np.mean(left[left != M])
-        im[:, :part][left == M] = v
+        im[:, :part[1]][left == M] = v
 
-        right = im[:,-part:]
+        right = im[:,-part[1]:]
         v = np.mean(right[right != M])
-        im[:, -part:][right == M] = v
+        im[:, -part[1]:][right == M] = v
 
         imgs.append(im)
 
