@@ -1,17 +1,44 @@
 # DocEmul
 A Toolkit to Generate Structured Historical Documents
 (This repository is still under construction. Please let us know if you find any issues...)
+This toolkit is presented in the paper "DocEmul: a Toolkit to Generate Structured Historical Documents" (https://arxiv.org/abs/1710.03474) in  Proceedings of the 14th International Conference on Document Analysis and Recognition (ICDAR), 2017.
+It has been proposed to generate structured synthetic documents emulating the actual document production process. Synthetic documents can be used to train systems to perform document analysis tasks. The toolkit is able to generate synthetic collections and also perform data augmentation to create a larger trainable dataset. It includes one method to extract the page background from real pages which can be used as a substrate where records can be written on the basis of variable structures and using cursive fonts. Moreover, it is possible to extend the synthetic collection by adding random noise, page rotations, and other visual variations.
+In the experiments we address the record counting task on handwritten structured collections containing a limited number of examples. More detailed experiments and results for the record counting task are presented in the paper "Deep neural networks for record counting in historical handwritten documents" (https://doi.org/10.1016/j.patrec.2017.10.023
+) published on Pattern Recognition Letters journal.
 
-# Repository description 
-In this dropbox link (https://www.dropbox.com/sh/2bxfeacrg6s19rj/AADzyLlNUoj91W1eKSBfWJ1Ya?dl=0) it is possible to access to all data. Please create a local dir EXAMPLES and download all data from the in the local dir EXAMPLES.
+## Data repo
+It is possible to find more data at a dropbox link (https://www.dropbox.com/sh/gx93qumgbvp2ipe/AABUbsexdJg-GuyJbRbNXGdsa?dl=0). In this repo there are some generated examples by using the proposed toolkit. In particular, there are examples from two collection used in the experiments.
+in <repo>/Data you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (Background) used to generate synthetic files, the generated text files over a transparent background (Text) and genereted structured documents (Generated)
 
-After the downloading, in EXAMPLES you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (BACKGROUND), the generated text files over a transparent background (TEXT) and genereted structured documents (GENERATED) 
+## Repository description
+
+###Document structure
+There are several XML files to describe the document structure. This files are used also in the experiments proposed in the research.
+###Text data
+In the text files there are the data used to write text during the production process.
 ### handwritten
 In this directory you can find some fonts downloaded from http://www.dafont.com/it/
 
-
+#Generation process
 ## Esposalles
-It is possible to emulate the generation of documents for the dataset Esposalles. Running the script test_generate_esposalles.py it will be possible to generate documents following the Esposalles model. It will build the synthetic dataset into the local directory "GENERATED/Esposalles/test". After that, it will augment the generated dataset with some data augmentation techiniques into the local directory "GENERATED/Esposalles/test_augmented".
+It is possible to emulate the generation of documents for the dataset Esposalles.
+
+###Download background images
+Run the script to download images from our repository.
+
+sh Data/Esposalles/download_extract_background_files.sh
+
+After that, you can find some background images into Data/Esposalles/Background
+
+###Generate synthetic pages
+Run the script to generate some synthetic image with data augmentation using:
+
+python generate_esposalles_images.py
+
+Try to modify the script to generate more pages.
 
 ## Brandenburg
-It is possible to emulate the generation of documents for the dataset Esposalles. Running the script test_generate_brandenburg.py it will be possible to generate documents following the Brandenburg model (branden2.xml). It will build the synthetic dataset (only text over a transparent background)  into the local directory "GENERATED/Brandenburg/test".
+It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script test_generate_brandenburg.py it will be possible to generate documents following the Brandenburg model (branden2.xml). It will build the synthetic dataset (only text over a transparent background)  into the local directory "GENERATED/Brandenburg/test".
+
+
+In this dropbox link (https://www.dropbox.com/sh/2bxfeacrg6s19rj/AADzyLlNUoj91W1eKSBfWJ1Ya?dl=0) it is possible to access to all data. Please create a local dir EXAMPLES and download all data from the in the local dir EXAMPLES.
