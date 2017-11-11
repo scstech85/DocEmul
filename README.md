@@ -1,6 +1,7 @@
 # DocEmul
 A Toolkit to Generate Structured Historical Documents
 (This repository is still under construction. Please let us know if you find any issues...)
+##
 This toolkit is presented in the paper "DocEmul: a Toolkit to Generate Structured Historical Documents" (https://arxiv.org/abs/1710.03474) in  Proceedings of the 14th International Conference on Document Analysis and Recognition (ICDAR), 2017.
 It has been proposed to generate structured synthetic documents emulating the actual document production process. Synthetic documents can be used to train systems to perform document analysis tasks. The toolkit is able to generate synthetic collections and also perform data augmentation to create a larger trainable dataset. It includes one method to extract the page background from real pages which can be used as a substrate where records can be written on the basis of variable structures and using cursive fonts. Moreover, it is possible to extend the synthetic collection by adding random noise, page rotations, and other visual variations.
 In the experiments we address the record counting task on handwritten structured collections containing a limited number of examples. More detailed experiments and results for the record counting task are presented in the paper "Deep neural networks for record counting in historical handwritten documents" (https://doi.org/10.1016/j.patrec.2017.10.023
