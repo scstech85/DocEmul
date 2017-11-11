@@ -9,7 +9,7 @@ In the experiments we address the record counting task on handwritten structured
 
 ## Data repo
 It is possible to find more data at a dropbox link (https://www.dropbox.com/sh/gx93qumgbvp2ipe/AABUbsexdJg-GuyJbRbNXGdsa?dl=0). In this repo there are some generated examples by using the proposed toolkit. In particular, there are examples from two collection used in the experiments.
-in <repo>/Data you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (Background) used to generate synthetic files, the generated text files over a transparent background (Text) and genereted structured documents (Generated)
+in '<repo>/Data' you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (Background) used to generate synthetic files, the generated text files over a transparent background (Text) and genereted structured documents (Generated)
 
 ## Repository description
 
