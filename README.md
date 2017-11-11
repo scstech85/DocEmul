@@ -8,30 +8,30 @@ In the experiments we address the record counting task on handwritten structured
 ) published on Pattern Recognition Letters journal.
 
 ## Data repo
-It is possible to find more data at a dropbox link (https://www.dropbox.com/sh/gx93qumgbvp2ipe/AABUbsexdJg-GuyJbRbNXGdsa?dl=0). In this repo there are some generated examples by using the proposed toolkit. In particular, there are examples from two collection used in the experiments.
-in '<repo>/Data' you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (Background) used to generate synthetic files, the generated text files over a transparent background (Text) and genereted structured documents (Generated)
+It is possible to find more data at a dropbox link (https://www.dropbox.com/sh/gx93qumgbvp2ipe/AABUbsexdJg-GuyJbRbNXGdsa?dl=0). In this `<repo>` there are some generated examples by using the proposed toolkit. In particular, there are examples from two collection used in the experiments.
+in `<repo>/Data` you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (`<repo>/Data/<dataset>/Background.zip`) used to generate synthetic files; the generated text files over a transparent background (`<repo>/Data/<dataset>/Text`); the genereted synthetic documents (`<repo>/Data/<dataset>/Generated`).
 
 ## Repository description
 
-###Document structure
+### Document structure
 There are several XML files to describe the document structure. This files are used also in the experiments proposed in the research.
-###Text data
+### Text data
 In the text files there are the data used to write text during the production process.
 ### handwritten
-In this directory you can find some fonts downloaded from http://www.dafont.com/it/
+In this directory you can find some fonts downloaded from `http://www.dafont.com/it/`
 
-#Generation process
+# Generation process
 ## Esposalles
 It is possible to emulate the generation of documents for the dataset Esposalles.
 
-###Download background images
+### Download background images
 Run the script to download images from our repository.
 
 sh Data/Esposalles/download_extract_background_files.sh
 
 After that, you can find some background images into Data/Esposalles/Background
 
-###Generate synthetic pages
+### Generate synthetic pages
 Run the script to generate some synthetic image with data augmentation using:
 
 python generate_esposalles_images.py
@@ -42,4 +42,3 @@ Try to modify the script to generate more pages.
 It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script test_generate_brandenburg.py it will be possible to generate documents following the Brandenburg model (branden2.xml). It will build the synthetic dataset (only text over a transparent background)  into the local directory "GENERATED/Brandenburg/test".
 
 
-In this dropbox link (https://www.dropbox.com/sh/2bxfeacrg6s19rj/AADzyLlNUoj91W1eKSBfWJ1Ya?dl=0) it is possible to access to all data. Please create a local dir EXAMPLES and download all data from the in the local dir EXAMPLES.
