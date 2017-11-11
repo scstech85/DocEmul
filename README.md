@@ -27,18 +27,18 @@ It is possible to emulate the generation of documents for the dataset Esposalles
 ### Download background images
 Run the script to download images from our repository.
 
-sh Data/Esposalles/download_extract_background_files.sh
+`sh Data/Esposalles/download_extract_background_files.sh`
 
-After that, you can find some background images into Data/Esposalles/Background
+After that, you can find some background images into `Data/Esposalles/Background`
 
 ### Generate synthetic pages
 Run the script to generate some synthetic image with data augmentation using:
 
-python generate_esposalles_images.py
+`python generate_esposalles_images.py`
 
 Try to modify the script to generate more pages.
 
 ## Brandenburg
-It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script test_generate_brandenburg.py it will be possible to generate documents following the Brandenburg model (branden2.xml). It will build the synthetic dataset (only text over a transparent background)  into the local directory "GENERATED/Brandenburg/test".
+It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python test_generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
 
 
