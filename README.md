@@ -17,8 +17,8 @@ in `<repo>/Data` you can find some generated files for two different datasets (E
 There are several XML files to describe the document structure. This files are used also in the experiments proposed in the research.
 ### Text data
 In the text files there are the data used to write text during the production process.
-### handwritten
-In this directory you can find some fonts downloaded from `http://www.dafont.com/it/`
+### Fonts
+In the directory `handwritten` you can find some fonts downloaded from `http://www.dafont.com/it/` and used to generate the synthetic data for the experiments.
 
 # Generation process
 ## Esposalles
