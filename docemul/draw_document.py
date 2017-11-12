@@ -304,7 +304,7 @@ class DrawDocument:
 
                 text_height = int(cell.text_height / float(point_pixel) * 12)
 
-                #fonts_path = 'handwritten', text_font = "FountainPen.ttf"
+                #fonts_path = 'handwritten2', text_font = "FountainPen.ttf"
 
                 font_path = self.fonts[cell.type_font].path
 
