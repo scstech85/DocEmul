@@ -7,6 +7,10 @@ It has been proposed to generate structured synthetic documents emulating the ac
 In the experiments we address the record counting task on handwritten structured collections containing a limited number of examples. More detailed experiments and results for the record counting task are presented in the paper "Deep neural networks for record counting in historical handwritten documents" (https://doi.org/10.1016/j.patrec.2017.10.023
 ) published on Pattern Recognition Letters journal.
 
+Please, contact us if you want to collaborate to our project in order to extend the software capability. 
+In the future works we will add also a structural ground truth to train a model for record detection. 
+Keep in touch to help us in this tasks.
+
 ## Data repo
 It is possible to find more data at a dropbox link (https://www.dropbox.com/sh/gx93qumgbvp2ipe/AABUbsexdJg-GuyJbRbNXGdsa?dl=0). In this `<repo>` there are some generated examples by using the proposed toolkit. In particular, there are examples from two collection used in the experiments.
 in `<repo>/Data` you can find some generated files for two different datasets (Esposalles, Brandenburg). In particular, you can find the extracted background (`<repo>/Data/<dataset>/Background.zip`) used to generate synthetic files; the generated text files over a transparent background (`<repo>/Data/<dataset>/Text`); the genereted synthetic documents (`<repo>/Data/<dataset>/Generated`).
@@ -38,6 +42,8 @@ Run the script to generate some synthetic image with data augmentation using:
 `python generate_esposalles_images.py`
 
 Try to modify the script to generate more pages.
+
+If you need more instructions to define the document structure, please, contact us and we will glad to help you..
 
 ## Brandenburg
 It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python test_generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
