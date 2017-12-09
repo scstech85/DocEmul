@@ -48,4 +48,17 @@ If you need more instructions to define the document structure, please, contact 
 ## Brandenburg
 It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python test_generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
 
+# Citing DocEmul
 
+If you find DocEmul useful in your research, please consider citing:
+
+@article{CAPOBIANCO2017,
+title = "Deep neural networks for record counting in historical handwritten documents",
+journal = "Pattern Recognition Letters",
+year = "2017",
+issn = "0167-8655",
+doi = "https://doi.org/10.1016/j.patrec.2017.10.023",
+url = "http://www.sciencedirect.com/science/article/pii/S0167865517303914",
+author = "Samuele Capobianco and Simone Marinai",
+keywords = "Handwritten documents, Convolutional neural networks, Synthetic document generation, Record counting"
+}
