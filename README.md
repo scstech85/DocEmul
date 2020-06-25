@@ -26,6 +26,11 @@ Before to start the generation process, you need to download from `http://www.da
 Run the script `python download_font.py' which creates the directory `handwritten`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
 
 # Generation process
+
+## Pre-requisites
+- Python 3
+- `pip install -r py-requirements.txt`
+
 ## Esposalles
 It is possible to emulate the generation of documents for the dataset Esposalles.
 

@@ -1,0 +1,8 @@
+dexml
+image
+matplotlib
+numpy
+pillow
+scipy
+scikit-learn
+scikit-image
