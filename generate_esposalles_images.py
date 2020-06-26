@@ -14,7 +14,3 @@ run('GENERATED/Esposalles/test',size=(366*4,256*4),num=1)
 
 #data_augmentation
 data_augment('GENERATED/Esposalles/test/gt.csv', 'GENERATED/Esposalles/test_augmented',f_output = 'gt_augment.csv',resize=None,rotate=2, rotate_time=1, noise=1)
-
-
-
-

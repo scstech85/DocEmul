@@ -1,5 +1,6 @@
 dexml
 image
+imageio
 matplotlib
 numpy
 pillow

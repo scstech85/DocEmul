@@ -1,8 +1,8 @@
-import urllib2
+import urllib
+import urllib.request
 import zipfile
 import shutil
 import os
-
 
 
 def download_font(url, final_dir, ttf_name,ext='ttf', fname='tmp.zip',max_attempt=3):
@@ -12,43 +12,45 @@ def download_font(url, final_dir, ttf_name,ext='ttf', fname='tmp.zip',max_attemp
 
         while attempts < max_attempt:
             try:
-                response = urllib2.urlopen(url, timeout = 5)
+                response = urllib.request.urlopen(url, timeout = 5)
                 content = response.read()
-                f = open( fname, 'w' )
+                f = open( fname, 'wb' )
                 f.write( content )
                 f.close()
                 break
-            except urllib2.URLError as e:
+            except Exception as e:
                 attempts += 1
-                print type(e)
-                return None
+                print(type(e))
+                # return None
         return fname
 
     def unzip_move_delete(loc_name, final_path, directory_to_extract_to='tmp'):
-        print 'unzip dir', loc_name
+        print('unzip dir', loc_name)
         zip_ref = zipfile.ZipFile(loc_name, 'r')
         zip_ref.extractall(directory_to_extract_to)
         zip_ref.close()
 
         files = [os.path.join(directory_to_extract_to,f) for f in os.listdir(directory_to_extract_to) if f.endswith(ext)]
-        print 'list files'
-        print files
+        print('list files')
+        print(files)
         if len(files)>1:
-            print 'ATTENTION!!!!!!',files[0]
-        print 'move ttf file', files[0],
+            print('ATTENTION!!!!!!',files[0])
+        print('move ttf file', files[0],)
         shutil.copy2(files[0], final_path)
 
         shutil.rmtree(directory_to_extract_to)
+        return
 
     if not os.path.isdir(final_dir):
-        os.makedirs(final_dir)
+        os.makedirs(final_dir, exist_ok=True)
 
     loc_file = download(url)
     final_ttf = os.path.join(final_dir, ttf_name)
-    print 'final file',
+    print('final file', final_ttf)
     unzip_move_delete(loc_file, final_ttf)
-    print 'remove file', loc_file
+    print('remove file', loc_file)
     os.remove(loc_file)
+    return
 
 #<Font path="handwritten2/A_Glitch_In_Time.ttf" />
 #<Font path="handwritten2/Lovelt__.ttf" />

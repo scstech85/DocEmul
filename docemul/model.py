@@ -14,8 +14,6 @@ class Cell(dexml.Model):
     type_font = fields.Integer()
 
 
-
-
 class Line(dexml.Model):
     #id = fields.Integer(attrname="id")
     height = fields.Integer()
@@ -26,7 +24,6 @@ class Line(dexml.Model):
     type = fields.String()
     probability = fields.Float()
     repeat = fields.Integer()
-
 
 
 class Lines(dexml.Model):
@@ -69,7 +66,6 @@ class Object(dexml.Model):
 
     probability = fields.Float()
 
-
 class Document(dexml.Model):
     id = fields.String(attrname='id')
 
@@ -99,9 +95,6 @@ class Dictonary(dexml.Model):
 
 class Font(dexml.Model):
     path = fields.String()
-
-
-
 
 
 class Documents(dexml.Model):
@@ -176,7 +169,7 @@ docs.documents.append(document)
 def read_xml(cla, file):
     f = open(file)
     txt = f.read()
-    print txt
+    print(txt)
     return cla.parse(txt)
 
 
@@ -240,5 +233,4 @@ def read_dictonary(file):
     wordList = re.sub("[^\w]", " ", txt).split()
 
     return wordList
-
 

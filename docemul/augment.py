@@ -1,20 +1,22 @@
-import PIL,Image
-from skimage.color import rgb2grey
+import PIL
+from PIL import Image
+from skimage.color import rgb2gray
 import os
 import csv
-from scipy.misc import imread,imsave
+from imageio import imread, imsave
+from skimage.transform import resize as imresize
 import numpy as np
+
 def augment_img(img, rotate=3, rotate_time=2, noise=2):
     imgs = [img]
 
-    from scipy.misc import imrotate
     for _ in range(rotate_time):
 
         rotation = np.random.random()*rotate*2 - rotate
-        print rotation
+        print(rotation)
         M = 255
-
-        im = PIL.Image.fromarray(np.uint8(img))
+        img = (img * 255).astype(np.uint8)
+        im = PIL.Image.fromarray(img)
         # converted to have an alpha layer
         im2 = im.convert('RGBA')
         # rotated image
@@ -27,7 +29,8 @@ def augment_img(img, rotate=3, rotate_time=2, noise=2):
         out = out.convert(im.mode)
 
         im = np.asarray(out).copy()
-        im = rgb2grey(im)
+        if len(im.shape) != 2:
+            im = rgb2gray(im)
         part = tuple(map(int,0.05 * np.array(im.shape[:2])))
 
         top = im[:part[0],:]
@@ -64,33 +67,36 @@ def augment_img(img, rotate=3, rotate_time=2, noise=2):
 def generate_noise(img, rand_no_noise=0.9, max_rand_distr=0.03, step=16):
 
     mod = np.zeros_like(img)
-    for w in range(0, img.shape[0], img.shape[0] / step):
+    for w in range(0, img.shape[0], img.shape[0] // step):
 
-        for h in range(0, img.shape[1], img.shape[1] / step):
+        for h in range(0, img.shape[1], img.shape[1] // step):
             if np.random.random() <= rand_no_noise:
                 v = 0
 
             else:
                 v = np.random.random() * max_rand_distr
 
-            m = mod[w:w + img.shape[0] / (step / 2), h:h + img.shape[1] / (step / 2)]
+            m = mod[w:w + img.shape[0] // (step // 2), h:h + img.shape[1] // (step // 2)]
             noise = (np.random.rand(m.shape[0], m.shape[1]) < v).astype(np.uint8)
 
-            mod[w:w + img.shape[0] / (step / 2), h:h + img.shape[1] / (step / 2)] += noise
+            mod[w:w + img.shape[0] // (step // 2), h:h + img.shape[1] // (step // 2)] += noise
 
     return (mod>0).astype(np.uint8)
 
 def data_augment(fcsv, dir_target,f_output = 'gt_augment.csv',resize=(450,190),rotate=2, rotate_time=1, noise=1):
-    os.makedirs(dir_target)
+    os.makedirs(dir_target, exist_ok=True)
     img_dir = os.path.join(dir_target, 'imgs')
-    os.makedirs(img_dir)
+    os.makedirs(img_dir, exist_ok=True)
     f_csv_o = os.path.join(dir_target, f_output)
 
 
     with open(fcsv, 'r') as csv_in:
         with open(f_csv_o, 'w') as csv_out:
             writer = csv.writer(csv_out, delimiter=' ')
-            for f, r in csv.reader(csv_in, delimiter=' '):
+            for row in csv.reader(csv_in, delimiter=' '):
+                if not row:
+                    continue
+                f, r = row
                 if os.path.isfile(f):
                     img = imread(f)
                     if resize:
@@ -107,8 +113,8 @@ def data_augment(fcsv, dir_target,f_output = 'gt_augment.csv',resize=(450,190),r
                     for j, ii in enumerate(imgs):
                         im_name = os.path.join(img_dir, fname+'_'+str(j)+'.'+ext)
                         imsave(im_name, ii)
-                        print im_name
+                        print(im_name)
                         writer.writerow([im_name, r])
                 else:
-                    print 'file non valid:', f
+                    print('file non valid:', f)
 

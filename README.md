@@ -19,11 +19,13 @@ in `<repo>/Data` you can find some generated files for two different datasets (E
 
 ### Document structure
 There are several XML files to describe the document structure. This files are used also in the experiments proposed in the research.
+
 ### Text data
 In the text files there are the data used to write text during the production process.
+
 ### Fonts
 Before to start the generation process, you need to download from `http://www.dafont.com/` the used fonts for the experiments.
-Run the script `python download_font.py' which creates the directory `handwritten`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
+Run the script `python download_font.py` which creates the directory `handwritten`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
 
 # Generation process
 
