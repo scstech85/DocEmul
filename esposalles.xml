@@ -392,15 +392,15 @@
         <Dictonary path="numbers.txt" number_words="1"/>
     </dictonaries>
     <fonts>
-        <Font path="handwritten/A_Glitch_In_Time.ttf" />
+        <Font path="fonts/A_Glitch_In_Time.ttf" />
 
-        <Font path="handwritten/Lovelt__.ttf" />
-        <Font path="handwritten/WankstabergBattles.ttf" />
-        <Font path="handwritten/SCRIPTIN.ttf" />
+        <Font path="fonts/Lovelt__.ttf" />
+        <Font path="fonts/WankstabergBattles.ttf" />
+        <Font path="fonts/SCRIPTIN.ttf" />
 
 
-        <Font path="handwritten/kevinwildfont.ttf" />
-        <Font path="handwritten/Mr_Fisherman_and_the_Shoemaker.ttf" />
+        <Font path="fonts/kevinwildfont.ttf" />
+        <Font path="fonts/Mr_Fisherman_and_the_Shoemaker.ttf" />
 
 
 

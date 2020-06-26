@@ -5,7 +5,7 @@ import numpy as np
 
 
 
-def create_bf(dir='/home/scstech/PycharmProjects/synthetic_handwritten/CNN_MODELS/test_set/F2-1'):
+def create_bf(dir='/home/scstech/PycharmProjects/synthetic_fonts/CNN_MODELS/test_set/F2-1'):
     files = [os.path.join(dir,f) for f in os.listdir(dir) if f.split('.')[-1] == 'jpg']
     np.random.shuffle(files)
     print len(files)

@@ -25,7 +25,7 @@ In the text files there are the data used to write text during the production pr
 
 ### Fonts
 Before to start the generation process, you need to download from `http://www.dafont.com/` the used fonts for the experiments.
-Run the script `python download_font.py` which creates the directory `handwritten`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
+Run the script `python download_font.py` which creates the directory `fonts`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
 
 # Generation process
 
