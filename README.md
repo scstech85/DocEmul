@@ -53,7 +53,7 @@ Try to modify the script to generate more pages.
 If you need more instructions to define the document structure, please, contact us and we will glad to help you..
 
 ## Brandenburg
-It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python test_generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
+It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
 
 # Citing DocEmul
 

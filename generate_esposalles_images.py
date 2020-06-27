@@ -6,7 +6,7 @@ RealBackGound.dirname = 'Data/Esposalles/Background'
 
 realSampler = RealBackGound.load_examples()
 
-def run(dir, num=1, size=None, sampler=realSampler, greyscale=True,type='IMG',model='esposalles.xml',seed=1):
+def run(dir, num=1, size=None, sampler=realSampler, greyscale=True,type='IMG',model='data/Eesposalles/esposalles.xml',seed=1):
     generate(dir, num=num, size=size,sampler=sampler, greyscale=greyscale,type=type,model=model,seed=seed)
 
 #generate dataset with background
