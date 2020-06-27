@@ -5,7 +5,7 @@ import numpy as np
 
 
 
-def create_bf(dir='/home/scstech/PycharmProjects/synthetic_handwritten/CNN_MODELS/test_set/F2-1'):
+def create_bf(dir='/home/scstech/PycharmProjects/synthetic_fonts/CNN_MODELS/test_set/F2-1'):
     files = [os.path.join(dir,f) for f in os.listdir(dir) if f.split('.')[-1] == 'jpg']
     np.random.shuffle(files)
     print len(files)
@@ -16,7 +16,7 @@ def create_bf(dir='/home/scstech/PycharmProjects/synthetic_handwritten/CNN_MODEL
 
 
 
-def run_realbackground(dir, path_background,num=9, size=None, greyscale=False,type='TXT',model='branden.xml'):
+def run_realbackground(dir, path_background,num=9, size=None, greyscale=False,type='TXT',model='Data/Brandenburg/branden.xml'):
     RealBackGound.dirname = path_background
     realSampler = RealBackGound.load_examples()
 
@@ -26,7 +26,7 @@ def run_realbackground(dir, path_background,num=9, size=None, greyscale=False,ty
 #solidSampler = SolidBackGroundback(colors=[255])
 #realSampler = RealBackGound.load_examples()
 
-def run(dir, num=5, size=None, sampler=None, greyscale=False,type='TXT',model='branden2.xml',seed=2):
+def run(dir, num=5, size=None, sampler=None, greyscale=False,type='TXT',model='Data/Brandenburg/branden2.xml',seed=2):
     generate(dir, num=num, size=size,sampler=sampler, greyscale=greyscale,type=type,model=model,seed=seed)
 
 

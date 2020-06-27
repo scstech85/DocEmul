@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.ndimage import interpolation,filters
-from scipy.misc import imresize
+from skimage.transform import resize as imresize
 
 def autoinvert(image):
     """Automatically invert document images, so that the majority of pixels

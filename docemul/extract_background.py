@@ -1,5 +1,5 @@
-from scipy.misc import imread, imsave, imresize
-
+from imageio import imread, imsave
+from skimage.transform import resize as imresize
 import numpy as np
 import pylab
 
@@ -7,7 +7,7 @@ from skimage.morphology import disk
 from skimage.filters import threshold_otsu
 from skimage.morphology import dilation
 
-from sauvola_binarization import compute_sauvola_binarization
+from .sauvola_binarization import compute_sauvola_binarization
 
 
 def get_background_otsu(file):
@@ -55,9 +55,9 @@ def get_background_otsu(file):
 
     for y,x in pixels:
         i+=1
-        print i, len(pixels)
+        print(i, len(pixels))
         if fg[y,x]==1:
-            print y,x
+            print(y,x)
             left, top, right ,bottom = get_bounds(y,x,r)
             while(ok_bounds(fg[top:bottom,left:right])==False):
 
@@ -131,9 +131,9 @@ def get_background_sauvola(file):
     i = 0
     for y,x in pixels:
         i+=1
-        print i, len(pixels)
+        print(i, len(pixels))
         if fg[y,x]==1:
-            print y,x
+            print(y,x)
             left, top, right ,bottom = get_bounds(y,x,r)
             while(ok_bounds(fg[top:bottom,left:right])==False):
 
@@ -171,13 +171,13 @@ import os
 
 
 def create_background_dataset(dir, target, ext='jpg', type='otsu'):
-    from util import get_files
+    from .util import get_files
 
     if not os.path.isdir(target):
         os.mkdir(target)
 
     for src, fname in get_files(dir,ext=ext):
-        print src
+        print(src)
 
         if type == 'otsu':
             bg_file = get_background_otsu(src)

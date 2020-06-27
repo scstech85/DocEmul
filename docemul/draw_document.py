@@ -1,13 +1,6 @@
-from model import Document, Lines, read_xml
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw,ImageEnhance
-
+from .model import Document, Lines, read_xml
+from PIL import Image, ImageFont, ImageDraw, ImageEnhance
 import numpy as np
-
-
-
-
 import os
 
 def confirm(prob):
@@ -97,7 +90,7 @@ class DrawDocument:
 
         self.records = []
 
-        print 'document.max_append_records', document.max_append_records
+        print('document.max_append_records', document.max_append_records)
 
         check_to_fill = np.random.randint(0, document.max_append_records) if document.max_append_records > 0 else 0
 
@@ -112,12 +105,12 @@ class DrawDocument:
             record, corpus_top = self.__draw_record__(document.record, self.corpus_top)
             loc_width = corpus_top - self.top
 
-            print '--', corpus_top, loc_width, corpus_top - self.corpus_top, '::', self.corpus_min_height, self.corpus_max_height
+            print('--', corpus_top, loc_width, corpus_top - self.corpus_top, '::', self.corpus_min_height, self.corpus_max_height)
 
             if loc_width < self.corpus_max_height:
                 self.records.append(record)
 
-                print 'record', num_records + 1, 'append!!!'
+                print('record', num_records + 1, 'append!!!')
 
                 self.corpus_top = corpus_top
 
@@ -130,23 +123,23 @@ class DrawDocument:
 
         self.num_records = num_records
 
-        print 'final num records', self.num_records
+        print('final num records', self.num_records)
 
 
 
     def __draw_record__(self, groups, corpus_top):
 
         record = DrawRecord()
-        print 'num groups', len(groups)
+        print('num groups', len(groups))
 
         for g, textgroup in enumerate(groups):
-            print 'group', g+1
+            print('group', g+1)
 
             if confirm(textgroup.probability):
 
-                print 'num lines', len(textgroup.real_lines)
+                print('num lines', len(textgroup.real_lines))
                 for l, line in enumerate(textgroup.real_lines):
-                    print 'line', l+1
+                    print('line', l+1)
                     if line.type == 'TextLine':
 
                         if confirm(line.probability):
@@ -164,7 +157,7 @@ class DrawDocument:
 
     def __append_text__(self, corpus_top, line, record):
         record.lines.append((corpus_top, corpus_top + line.height))
-        print 'num cells', len(line.cells)
+        print('num cells', len(line.cells))
         text_min_height_prob = line.text_min_height_prob
 
         for cell in line.cells:
@@ -181,7 +174,7 @@ class DrawDocument:
 
                 cell_x += x_step
 
-            print 'cell_x', cell_x, 'cell_width', cell_width
+            print('cell_x', cell_x, 'cell_width', cell_width)
             loc_top = corpus_top
 
             loc_left = self.corpus_left + cell_x
@@ -239,7 +232,7 @@ class DrawDocument:
             if number_words<=0:
                 number_words = np.inf
 
-            print 'number words', number_words
+            print('number words', number_words)
 
 
             np.random.shuffle(dictonary)
@@ -253,7 +246,7 @@ class DrawDocument:
             o = iter(dictonary)
             i = 0
             while(True):
-                word = o.next()
+                word = next(o)
 
                 # se siamo alla prima parola rispetto ad aspettarmene almeno 2, allora controllo la lunghezza
                 if i == 0 and len(word)<min_lenght_first_word and number_words>1:
@@ -261,7 +254,7 @@ class DrawDocument:
 
                 w, h = draw.textsize(phrase+word, font=font)
 
-                print 'text dimension', w, h
+                print('text dimension', w, h)
 
                 if i == 0 and w>width:
                     continue
@@ -279,8 +272,8 @@ class DrawDocument:
                     break
 
             if len(phrase)<min_lenght_first_word:
-                print 'error phrase', len(phrase)
-            print 'phrase', phrase
+                print('error phrase', len(phrase))
+            print('phrase', phrase)
 
             return phrase
 
@@ -292,11 +285,11 @@ class DrawDocument:
 
 
 
-        print 'num_records', len(self.records)
+        print('num_records', len(self.records))
         #index = 0
         for i, record in enumerate(self.records):
-            print 'record', i+1
-            print 'num_cells', len(record.cells)
+            print('record', i+1)
+            print('num_cells', len(record.cells))
             for cell in record.cells:
 
 
@@ -304,7 +297,7 @@ class DrawDocument:
 
                 text_height = int(cell.text_height / float(point_pixel) * 12)
 
-                #fonts_path = 'handwritten2', text_font = "FountainPen.ttf"
+                #fonts_path = 'fonts2', text_font = "FountainPen.ttf"
 
                 font_path = self.fonts[cell.type_font].path
 
@@ -318,7 +311,7 @@ class DrawDocument:
                 #cY = (cell.top + cell.bottom)/2
 
                 #text = dictonary[index:index+cell.n_words]
-                print 'cell', cell.left, cell.top, cell.right, cell.bottom, 'T H', text_height
+                print('cell', cell.left, cell.top, cell.right, cell.bottom, 'T H', text_height)
 
                 dictonary = self.dicts[cell.type_dictonary]
 
@@ -336,6 +329,7 @@ class DrawDocument:
 
     def create_background(self,make_lines=False):
         background = self.sampler.sample_bgimage((self.height, self.width))
+        background = (background*255).astype(np.uint8)
         img = Image.fromarray(background)
         if make_lines:
             img = self._create_background(img)
@@ -379,6 +373,7 @@ class DrawDocument:
 
     def create_image(self):
         background = self.sampler.sample_bgimage((self.height, self.width))
+        background = (background*255).astype(np.uint8)
         img = Image.fromarray(background)
 
         img_base = self.create_background(img)
@@ -398,5 +393,5 @@ class DrawDocument:
         return watermark(img_base, img_text, (0, 0))
 
     def __append_separator__(self, corpus_top,line):
-        print 'no method'
+        print('no method')
         pass

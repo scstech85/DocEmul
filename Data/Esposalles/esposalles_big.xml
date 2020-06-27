@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <Documents>
-    <Document id="1!L" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="150" corpus_width="2564" corpus_min_height="2000"
+    <Document id="1!L" max_append_records="18" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="150" corpus_width="2564" corpus_min_height="2600"
               corpus_max_height="3890" rotate="2">
         <header>
             <GroupTextLine probability="1" type="FULL">
@@ -39,7 +39,7 @@
             <GroupTextLine probability="1" type="NO">
 
 
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="0.7" repeat="1">
 
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
                 </Line>
@@ -48,12 +48,12 @@
                     <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.6" repeat="1">
                     <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.5" repeat="1">
 
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
@@ -96,7 +96,7 @@
 
     </Document>
 
-    <Document id="1!R" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="100" corpus_width="2564" corpus_min_height="2000"
+    <Document id="1!R" max_append_records="18" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="100" corpus_width="2564" corpus_min_height="2600"
               corpus_max_height="3890" rotate="2">
         <header>
             <GroupTextLine probability="1" type="FULL">
@@ -135,7 +135,7 @@
             <GroupTextLine probability="1" type="NO">
 
 
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="0.7" repeat="1">
 
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
                 </Line>
@@ -144,12 +144,12 @@
                     <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.6" repeat="1">
                     <Cell type_font="0"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.5" repeat="1">
 
                     <Cell type_font="0"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
@@ -193,7 +193,7 @@
 
     </Document>
 
-    <Document id="2!L" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="150" corpus_width="2564" corpus_min_height="2000"
+    <Document id="2!L" max_append_records="18" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="150" corpus_width="2564" corpus_min_height="2600"
               corpus_max_height="3890" rotate="2">
         <header>
             <GroupTextLine probability="1" type="FULL">
@@ -232,7 +232,7 @@
             <GroupTextLine probability="1" type="NO">
 
 
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="0.7" repeat="1">
 
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
                 </Line>
@@ -241,12 +241,12 @@
                     <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.6" repeat="1">
                     <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.5" repeat="1">
 
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
@@ -289,7 +289,7 @@
 
     </Document>
 
-    <Document id="2!R" max_append_records="6" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="100" corpus_width="2564" corpus_min_height="2000"
+    <Document id="2!R" max_append_records="18" probability="0.8" height="3942" width="2762" corpus_top="110" corpus_left="100" corpus_width="2564" corpus_min_height="2600"
               corpus_max_height="3890" rotate="2">
         <header>
             <GroupTextLine probability="1" type="FULL">
@@ -328,7 +328,7 @@
             <GroupTextLine probability="1" type="NO">
 
 
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="1" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="105" type="TextLine" probability="0.7" repeat="1">
 
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.03" y_random="0.1" width="0.71" height="-1" probability="1" />
                 </Line>
@@ -337,12 +337,12 @@
                     <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="1"/>
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.69" height="-1" probability="1" />
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.6" repeat="1">
                     <Cell type_font="3"  type_text="0" x="0" x_random="0.03" y_random="0.1" width="0.13" height="170"  probability="0.3"/>
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
                 </Line>
-                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.7" repeat="1">
+                <Line  height="130" text_min_height_prob="0.9" y_space_step="104" type="TextLine" probability="0.5" repeat="1">
 
                     <Cell type_font="3"  type_text="0" x="0.15" x_random="0.01" y_random="0.1" width="0.70" height="-1" probability="1" />
 
@@ -387,20 +387,20 @@
     </Document>
 
     <dictonaries>
-        <Dictonary path="divina.txt" number_words="-1"/>
-        <Dictonary path="extra.txt" number_words="1"/>
-        <Dictonary path="numbers.txt" number_words="1"/>
+        <Dictonary path="Dictionaries/divina.txt" number_words="-1"/>
+        <Dictonary path="Dictionaries/extra.txt" number_words="1"/>
+        <Dictonary path="Dictionaries/numbers.txt" number_words="1"/>
     </dictonaries>
     <fonts>
-        <Font path="handwritten/A_Glitch_In_Time.ttf" />
+        <Font path="fonts/A_Glitch_In_Time.ttf" />
 
-        <Font path="handwritten/Lovelt__.ttf" />
-        <Font path="handwritten/WankstabergBattles.ttf" />
-        <Font path="handwritten/SCRIPTIN.ttf" />
+        <Font path="fonts/Lovelt__.ttf" />
+        <Font path="fonts/WankstabergBattles.ttf" />
+        <Font path="fonts/SCRIPTIN.ttf" />
 
 
-        <Font path="handwritten/kevinwildfont.ttf" />
-        <Font path="handwritten/Mr_Fisherman_and_the_Shoemaker.ttf" />
+        <Font path="fonts/kevinwildfont.ttf" />
+        <Font path="fonts/Mr_Fisherman_and_the_Shoemaker.ttf" />
 
 
 

@@ -1,7 +1,7 @@
 import os
 import numpy as np
-from model import model_docs,read_dictonary
-from draw_document import DrawDocument
+from .model import model_docs, read_dictonary
+from .draw_document import DrawDocument
 import csv
 
 def resize(im, size):
@@ -11,11 +11,8 @@ def resize(im, size):
         im = im.resize(size, PIL.Image.ANTIALIAS)
         return im
     except IOError as e:
-        print e
+        print(e)
         #print "cannot create thumbnail for '%s'" % infile
-
-
-
 
 
 def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model='article_small.xml', type = 'TEXT', seed = None):
@@ -24,7 +21,7 @@ def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model
         np.random.seed(seed)
 
 
-    docs,dictionaries, fonts = model_docs(model)
+    docs, dictionaries, fonts = model_docs(model)
     # sampler = SampleColors.load(file='model/sampler.pkl')
     # sampler.load()
     #sta_tr, train, tt_ff = get_stat('/home1/shared-h1/GT_volumen208/train_list.csv', list_files=True)
@@ -40,21 +37,21 @@ def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model
     j = 0
 
     if not os.path.isdir(dir):
-        print 'NEW DIR: ', dir
-        os.makedirs(dir)
+        print('NEW DIR: ', dir)
+        os.makedirs(dir, exist_ok=True)
         os.mkdir(os.path.join(dir, 'imgs'))
         os.mkdir(os.path.join(dir, 'gt'))
         csv_f = open(f_csv, 'w')
         csv_f_2 = open(f_csv_2, 'w')
 
     else:
-        print 'OLD DIR: ', dir
+        print('OLD DIR: ', dir)
         csv_f = open(f_csv, 'r')
         reader = csv.reader(csv_f, delimiter=' ')
         for _ in reader:
             j += 1
         csv_f.close()
-        print 'number', j
+        print('number', j)
         csv_f = open(f_csv, 'a')
         csv_f_2 = open(f_csv_2, 'a')
 
@@ -65,7 +62,7 @@ def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model
     dicts = [{'words':read_dictonary(dictonary.path), 'number':dictonary.number_words} for dictonary in dictionaries]
 
     for d in docs:
-        print d.id
+        print(d.id)
         for c in range(num):
             i = j + c
 
@@ -77,7 +74,7 @@ def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model
             elif type == 'BKG':
                 img = doc.create_background()
             else:
-                print 'type err',type,'-', 'TXT, IMG, BKG'
+                print('type err', type, '-', 'TXT, IMG, BKG')
                 return
 
             if greyscale:
@@ -92,8 +89,8 @@ def generate(dir, num=10, size=(365, 256), sampler = None, greyscale=True, model
                 img = resize(img, (size[1], size[0]))
             # img = img.resize((size[1],size[0]), PIL.Image.ANTIALIAS)
 
-            fname = os.path.join(dir, 'imgs', 'type_'+str(d.id)+':'+str(i + 1) + '_' + str(doc.num_records) + '.png')
-            print fname, 'num records', doc.num_records
+            fname = os.path.join(dir, 'imgs', 'type_'+str(d.id)+'-'+str(i + 1) + '_' + str(doc.num_records) + '.png')
+            print(fname, 'num records', doc.num_records)
             img.save(fname)
             writer.writerow([fname, doc.num_records])
             writer2.writerow([fname, doc.num_records, d.id])
@@ -119,7 +116,7 @@ def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotat
 
 
     def merge_images(base, text, pos = (0, 0)):
-        from draw_document import watermark
+        from .draw_document import watermark
 
         return watermark(base, text, pos)
 
@@ -130,21 +127,21 @@ def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotat
     j = 0
 
     if not os.path.isdir(dir):
-        print 'NEW DIR: ', dir
-        os.makedirs(dir)
+        print('NEW DIR: ', dir)
+        os.makedirs(dir, exist_ok=True)
         os.mkdir(os.path.join(dir, 'imgs'))
         os.mkdir(os.path.join(dir, 'gt'))
         csv_f = open(f_csv, 'w')
         #csv_f_2 = open(f_csv_2, 'w')
 
     else:
-        print 'OLD DIR: ', dir
+        print('OLD DIR: ', dir)
         csv_f = open(f_csv, 'r')
         reader = csv.reader(csv_f, delimiter=' ')
         for _ in reader:
             j += 1
         csv_f.close()
-        print 'number', j
+        print('number', j)
         csv_f = open(f_csv, 'a')
         #csv_f_2 = open(f_csv_2, 'a')
 
@@ -180,7 +177,7 @@ def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotat
                     j=1
 
 
-                print 'f_back', f_back
+                print('f_back', f_back)
 
                 base = Image.open(f_back)
 
@@ -195,24 +192,24 @@ def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotat
                     width, height = text.size
 
                     if back_h < height:
-                        print 'back_ H W', back_h, back_w
+                        print('back_ H W', back_h, back_w)
                         back_h = (back_h + height) / 2
 
                         back_w = max(back_w , width)
 
                         back_w +=np.random.randint(-50, 50)
 
-                        print 'back_ H w', back_h, back_w
+                        print('back_ H w', back_h, back_w)
 
                         base = base.resize((back_w, back_h), PIL.Image.ANTIALIAS)
 
 
                     w = int(width*(resize[1]))
                     h = int(height * (resize[0]))
-                    print width, height
+                    print(width, height)
                     width-=np.random.randint(0,w)
                     height-=np.random.randint(0,h)
-                    print width, height
+                    print(width, height)
 
                     text = text.resize((width, height), PIL.Image.ANTIALIAS)
 
@@ -225,7 +222,7 @@ def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotat
 
                 if rotate:
                     angle = np.random.randint(rotate[0], rotate[1])
-                    print 'angle', angle
+                    print('angle', angle)
                     text = text.rotate(angle, resample=Image.NEAREST)
 
 
@@ -242,7 +239,7 @@ def merge_dataset_background(f_csv_argb, dir_back, dir, resize= (0.15,0.1),rotat
                 N = b.split(':')[1].split('_')[0]
 
                 fname = os.path.join(dir, 'imgs',key + ':' + N + '_' + str(num) + '.png')
-                print 'fname', fname, num
+                print('fname', fname, num)
                 img.save(fname)
 
 

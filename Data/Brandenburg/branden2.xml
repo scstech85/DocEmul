@@ -694,24 +694,24 @@
 
 
     <dictonaries>
-        <Dictonary path="divina.txt" number_words="-1"/>
-        <Dictonary path="extra2.txt" number_words="1"/>
-        <Dictonary path="divina.txt" number_words="1"/>
-        <Dictonary path="numbers.txt" number_words="1"/>
-        <Dictonary path="extra3.txt" number_words="1"/>
+        <Dictonary path="Dictionaries/divina.txt" number_words="-1"/>
+        <Dictonary path="Dictionaries/extra2.txt" number_words="1"/>
+        <Dictonary path="Dictionaries/divina.txt" number_words="1"/>
+        <Dictonary path="Dictionaries/numbers.txt" number_words="1"/>
+        <Dictonary path="Dictionaries/extra3.txt" number_words="1"/>
     </dictonaries>
     <fonts>
-        <Font path="handwritten/A_Glitch_In_Time.ttf" />
+        <Font path="fonts/A_Glitch_In_Time.ttf" />
 
-        <Font path="handwritten/FountainPen.ttf" />
+        <Font path="fonts/FountainPen.ttf" />
 
-        <Font path="handwritten/Taken_by_Vultures_Demo.otf" />
+        <Font path="fonts/Taken_by_Vultures_Demo.otf" />
 
-        <Font path="handwritten/SCRIPTIN.ttf" />
+        <Font path="fonts/SCRIPTIN.ttf" />
         <!-- not yet used -->
 
 
-        <Font path="handwritten/Lemon_Tuesday.otf" />
+        <Font path="fonts/Lemon_Tuesday.otf" />
 
 
 

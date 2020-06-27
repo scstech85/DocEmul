@@ -1,13 +1,11 @@
-from scipy.misc import imread
+from imageio import imread, imsave
+from skimage.transform import resize as imresize
 from skimage.filters import threshold_otsu
 from skimage.color import rgb2gray
 import numpy as np
 from sklearn import mixture
 from sklearn.externals import joblib
-
-
-
-
+import os
 
 class BackGroudModel:
     def sample_bgimage(self, size):
@@ -39,7 +37,7 @@ class SampleColors(BackGroudModel):
         y = []
         shapes = []
         for f in files:
-            print f
+            print(f)
             img = imread(f)
 
             gray = rgb2gray(img)
@@ -57,7 +55,7 @@ class SampleColors(BackGroudModel):
             # print '1', len(filter(lambda v: v == 1, l))
             # print '0', len(filter(lambda v: v == 0, l))
 
-            print a.shape, l.shape
+            print(a.shape, l.shape)
             X.append(a)
             y.append(l)
 
@@ -88,12 +86,6 @@ class SampleColors(BackGroudModel):
     def load(cls, file='sampler.pkl'):
         obj = joblib.load(file)
         return cls(obj.X,obj.y,obj.gmms)
-
-
-
-from scipy.misc import imread, imsave, imresize
-
-import numpy as np
 
 
 def get_background(file):
@@ -144,9 +136,9 @@ def get_background(file):
     i = 0
     for y,x in pixels:
         i+=1
-        print i, len(pixels)
+        print(i, len(pixels))
         if fg[y,x]==1:
-            print y,x
+            print(y,x)
             left, top, right ,bottom = get_bounds(y,x,r)
             while(ok_bounds(fg[top:bottom,left:right])==False):
 
@@ -178,24 +170,22 @@ def get_files(dir, ext='jpg'):
         f_name = os.path.join(dir, f)
 
         if os.path.isfile(f_name) and f.split('.')[1] == ext:
-            print f
+            print(f)
             yield f_name, f
 
 
-import os
 def create_g_dataset(dir, target, ext='jpg'):
     if not os.path.isdir(target):
         os.mkdir(target)
 
         for src, fname in get_files(dir, ext=ext):
-            print src
+            print(src)
             bg_file = get_background(src)
             f_bg = os.path.join(target, fname)
             imsave(f_bg, bg_file)
 
     else:
-        print 'already done!!!'
-
+        print('already done!!!')
 
 
 class RealBackGound(BackGroudModel):
@@ -222,7 +212,7 @@ class RealBackGound(BackGroudModel):
 
             for src in files:
                 _, fname = os.path.split(src)
-                print src
+                print(src)
                 bg_file = get_background(src)
                 f_bg = os.path.join(local_dir, fname)
                 imsave(f_bg, bg_file)
@@ -240,7 +230,6 @@ class RealBackGound(BackGroudModel):
         img = imresize(img, size)
 
         return img
-
 
 
 class RealBackGoundBack(BackGroudModel):

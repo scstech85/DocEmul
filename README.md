@@ -19,13 +19,20 @@ in `<repo>/Data` you can find some generated files for two different datasets (E
 
 ### Document structure
 There are several XML files to describe the document structure. This files are used also in the experiments proposed in the research.
+
 ### Text data
 In the text files there are the data used to write text during the production process.
+
 ### Fonts
 Before to start the generation process, you need to download from `http://www.dafont.com/` the used fonts for the experiments.
-Run the script `python download_font.py' which creates the directory `handwritten`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
+Run the script `python download_font.py` which creates the directory `fonts`. Here you can find some fonts downloaded from `http://www.dafont.com/` and used to generate the synthetic data for the experiments.
 
 # Generation process
+
+## Pre-requisites
+- Python 3
+- `pip install -r py-requirements.txt`
+
 ## Esposalles
 It is possible to emulate the generation of documents for the dataset Esposalles.
 
@@ -46,7 +53,7 @@ Try to modify the script to generate more pages.
 If you need more instructions to define the document structure, please, contact us and we will glad to help you..
 
 ## Brandenburg
-It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python test_generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
+It is possible to emulate the generation of documents for the dataset Brandenburg. Running the script `python generate_brandenburg.py` it will be possible to generate documents following the Brandenburg model (`branden2.xml`). It will build the synthetic dataset (only text over a transparent background)  into the local directory `GENERATED/Brandenburg/test`.
 
 # Citing DocEmul
 
